@@ -1,0 +1,12 @@
+<apex:page setup="true">
+    <apex:sectionHeader title="Student" subtitle="New Student" help="apex/google.com" />
+    <apex:pageBlock >
+        <apex:facet name="header">
+        <h1>Header Info</h1>
+        </apex:facet>
+        Name:bhargava<br/>
+        <apex:facet name="footer">
+         <h2>Footer Info</h2>
+        </apex:facet>
+    </apex:pageBlock>
+</apex:page>

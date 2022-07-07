@@ -1,0 +1,17 @@
+<!--force:appHostable : force is the namespace and appHostable is the Interface-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" Name="firstName" type="string"/>
+    <aura:attribute access="public" Name="secondName" type="string"/>
+    <aura:attribute access="public" Name="fullName" type="string"/>
+    <lightning:card title='Display Full Name'>
+        <div class="slds-p-left_medium">
+    <Lightning:input style="width:12rem" name="input1" label="First Name" value="{!v.firstName}"/>
+    <Lightning:input style="width:12rem" name="input2" label="Second Name" value="{!v.secondName}"/>
+    <br/><br/>
+    <lightning:button variant="brand" label="FullName" onclick="{!c.display}" />
+            </div>
+    <div class="slds-p-left_x-large">
+      FullName:{!v.fullName}
+    </div>
+        </lightning:card>
+</aura:component>

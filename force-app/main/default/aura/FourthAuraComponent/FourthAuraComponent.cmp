@@ -1,0 +1,29 @@
+<!--req: we have to take the input values from the user so create two Lightning -->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >   
+     <!--create attributes-->
+    <aura:attribute access="public" type="integer" name="fNumber"/>
+    <aura:attribute access="Public" type="integer" name="sNumber"/> 
+    <!--creat attriute for output-->
+    <aura:attribute access="public" type="integer" name="result"/>
+    <!--Lightning card-->
+    <lightning:card  title="CALLING METHOD AND USING RETURNED VALUES IN ANOTHER FUNCTION" iconName="Utility :activity">
+    <div class="slds-p-left_medium">
+    <lightning:input name="input1" type="Number" style="width:15rem" value="{!v.fNumber}"/>
+        <lightning:input type="Number" name="input2" style="width:15rem" value="{!v.sNumber}"/><br/><br/>
+        <!--Buttons-->
+        <lightning:buttonGroup>
+        <lightning:button variant="Neutral" label="SqaureByAdd" aura:id="button1" onClick="{!c.SquareOfNumber}"/>
+            <lightning:button variant="Neutral" label="SquareBySubtract" aura:id="button2" onClick="{!c.SquareOfNumber}"/>
+        </lightning:buttonGroup>
+    </div>  
+    
+    <br/><br/>
+    
+        <lightning:card footer="Result">
+            <div class="slds-p-bottom_large">
+                <h1>Result: {!v.result}</h1>
+            </div>
+    </lightning:card>
+        </lightning:card>
+   
+</aura:component>

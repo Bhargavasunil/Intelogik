@@ -1,0 +1,46 @@
+<apex:page >
+    apex:page
+    -----------------------------------
+    apex is the namespace and page is the name of the component.
+    b.every VF page start and ends with apex:page
+    c.Attributes 
+       1.it is nothing but property of the component.
+       2.It is string.This string is used to refer the component in the page
+     c2.apiVersion::
+        1.This will specify version of api we are using.
+        2.Bydefault it will take latest version.
+         eg: when we want to use the features of old apiversion this will help us
+             apex:page apiVersion="43.0"
+       c3.sideBar::
+              1.It is a boolean value.
+              2.when set as a true,standard salesforce sidebar is displayed.
+              3.when set as a false,standard salesforce sidebar is hidden.
+              4.By default, the value is True.
+         c4.setup::
+               1.It is a boolean value.
+               2.when set as a True, salesforce standard force.com is displayed.
+               3.By default,the value is false.
+            c5.renerAs::
+                  1.if you want to render the page in the form of PDF then we renderAs PDF 
+                  2.apex:page renderAs="PDF"
+                c6.readOnly::
+                     1.If you want to open the content of the page in the read mode then we given readonly as true.
+                     2. when realOnly is true, we can display 10000 records.
+                 c7.standardController::
+                     1.This will refer to sobject in the VF page.
+                     2. we can define only one sObject as standard controller.
+                     3.sObject: salesforce Object(This can be standard object or custom object) 
+                       example:: account,Contact, customer__c,loan__c
+                  c8.controller::
+                      1.This will refer to apex class in the visualforce page.
+                      2.we can define only one apex class as a controller.
+                    c9.extensions::
+                        1.This will refer to the apex class.
+                        2.if you want to take the standard controller and cotroller together then we use extensions.
+                      c10.contentType::
+                           1.This will specify in which format content of the page should be displayed.
+                           2.vnd.msword#filename.doc
+                             vnd.ms-excel#filename.xls
+                             vnd - view and display 
+                             apex:page contentType="vnd.msword#one.doc"
+</apex:page>

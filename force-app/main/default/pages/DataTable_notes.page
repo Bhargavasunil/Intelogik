@@ -1,0 +1,26 @@
+<apex:page StandardController="Account" recordSetVar="items">
+  <apex:form >  
+   <apex:dataTable value="{!items}" var="a" width="700" Border="5px" cellpadding="3px" >
+     <apex:column value="{!a.Name}" /> <!--dataTable not showing Headers and Borders-->
+     <apex:column value="{!a.Industry}"/>
+     <apex:column value="{!a.Phone}"/>
+   </apex:dataTable>
+   <br/><br/>
+   <apex:dataTable value="{!items}" var="a" width="500" border="1px"  cellpadding="2px" style="margin:25px 25px 25px 25px;">
+    <apex:column value="{!a.Name}" /> <!--dataTable not showing Headers and Borders-->
+     <apex:column value="{!a.Industry}"/>
+     <apex:column value="{!a.Phone}"/>
+   </apex:dataTable>
+      <apex:dataTable value="{!items}" var="a" frame="hsides">
+       <apex:column value="{!a.Name}" /> <!--dataTable not showing Headers and Borders-->
+        <apex:column value="{!a.Industry}"/>
+         <apex:column value="{!a.Phone}"/>
+      </apex:dataTable>
+      <p style="color:Blue;">This is the Third Table</p>
+      <apex:dataTable value="{!items}" var="a" frame="rhs" width="75%">
+       <apex:column value="{!a.Name}" /> <!--dataTable not showing Headers and Borders-->
+        <apex:column value="{!a.Industry}"/>
+         <apex:column value="{!a.Phone}"/>
+      </apex:dataTable>
+  </apex:form>
+</apex:page>

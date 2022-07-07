@@ -1,0 +1,13 @@
+<apex:page >
+    <apex:includeLightning />
+    <div id="Lightning"/>
+    <script>
+    $Lightning.use("c:comboboxApp", function() {
+        //to reference the app on page we use 
+        //3. creating a component on the page
+        $Lightning.createComponent("c:combobox",{},"Lightning",function(cmp){
+            console.log('success')
+        });
+    }); 
+    </script>
+</apex:page>

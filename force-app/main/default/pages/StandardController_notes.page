@@ -1,0 +1,12 @@
+<!--Refering data from the Account object-->
+<apex:page standardController="Account" setup="true" >
+    <apex:form >
+        <apex:pageBlock title="Account" helpTitle="needHelp" helpUrl="/apex/page6" mode="edit">
+          <apex:pageBlockSection title="Basic info"  columns="1">
+              <apex:inputField label="Name of the Account" value="{!Account.Name}"/>
+              <apex:inputField value="{!Account.Phone}"/>
+              
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

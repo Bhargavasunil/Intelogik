@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute type='string' name="messageFromEvent"/>
+    <aura:attribute type='Integer' name="numEvents" default="0"/>
+    <aura:handler name="cmpEvent" event="c:P2C_Event" action="{!c.handleComponentEvent}"/>
+    <!--handler component contains the Notifier component-->
+    <c:p2c_Notifier/>
+    <!--Data which we get from the above declared child component, we will use in
+        below two lines of code.which is the part of the parent cmp-->
+    <p>{!v.messageFromEvent}</p>
+    <p>{!v.numEvents}</p>
+</aura:component>

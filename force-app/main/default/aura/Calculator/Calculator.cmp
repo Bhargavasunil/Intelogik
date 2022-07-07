@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<!--take two attributes to store the values from the uset-->
+    <aura:attribute name="firNum" access="Public" type="Integer"/>
+    <aura:attribute name="secNum" access="Public" type="Integer"/>
+    <!--creting another attribute to show the output-->
+    <aura:attribute name="Result" access="Public" type="Integer"/>
+    <Lightning:card title="Calculator" iconName="Standard:advanced_function">
+        <div class="slds-p-left_small">
+        <!--creating Input Elments -->
+        <Lightning:input label="First Number" type="Number" name="input1" value="{!v.firNum}" placeholder="Enter the number"/> <br/>
+        <Lightning:input label="Second Number" type="Number" name="input2"  value="{!v.secNum}"/><br/>  <!--name: specifies the name of the element-->
+    <!--Button with the label = add -->
+    <lightning:button variant="brand" label="ADD" iconName="utility:middle_align" iconPosition="right" onclick="{! c.Add}" />
+            <Lightning:button variant="Success" label = "Subtraction" onclick="{!c.Difference}"/>
+    <h1 style="color:Green"> Result :</h1> {!v.Result}
+        </div>
+    </Lightning:card>
+</aura:component>

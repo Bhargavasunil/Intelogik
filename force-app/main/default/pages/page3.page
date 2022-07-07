@@ -1,0 +1,14 @@
+<apex:page showHeader="false">
+  
+  <div>
+   <h1>Tab Section</h1>
+   <ul style="list-style-type:circle">
+   <li>Home</li>
+   <li>Account</li>
+   <li>Lead</li>
+   <li>Contact</li>
+   <li>Opportunty</li>
+   <li>Campaign </li>
+   </ul>
+  </div>
+</apex:page>

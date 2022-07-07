@@ -1,0 +1,5 @@
+<aura:component  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+<lightning:card footer="Example Of Calling One function By Another Fuction" title="Example Of Calling One function By Another Fuction">
+    <lightning:button variant="brand" label="click" onclick= "{!c.myAction}" /> 
+ </lightning:card>
+</aura:component>

@@ -1,0 +1,17 @@
+<apex:page Controller="additionController" >
+    <!-- <apex:form> is used for user interaction cases-->
+    <apex:form >
+        <font color="red" size="5">
+            FNO &nbsp;&nbsp;<apex:inputText size="20" value="{!fn}"/>  <br/>
+            SNO &nbsp;&nbsp;<apex:inputText size="20" value="{!sn}"/>  <br/><br/>
+            <apex:commandButton value="Add"  action="{!addition}"/>&nbsp;
+            <apex:commandButton value="subtract" /><br/><br/>
+        </font>
+        <font color="Blue" size="4">
+            sum of two Numbers : &nbsp;&nbsp;<apex:outputText value="{!Sum}"/>
+        </font>
+        <font color="Yellow" size="4">
+            subtraction of Two Numbers:&nbsp;<apex:outputText />
+        </font>
+    </apex:form>
+</apex:page>

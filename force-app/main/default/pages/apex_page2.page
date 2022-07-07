@@ -1,0 +1,5 @@
+<apex:page >
+    Name : Sunil<br/>
+    Age  : 27 <br/>
+    City :Hyerabad <br/>
+</apex:page>

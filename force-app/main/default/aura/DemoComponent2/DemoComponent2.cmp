@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" name="output" type="Integer"/>
+    <aura:handler event="c:ResultEvent" action="{!c.display}"/>
+    <lightning:card title="Result of sum of 2 numbers" iconName="standard:assignment">
+        <div class="slds-p-left_xx-small st">
+           Sum of 2 Numbers : {!v.output}
+        </div>
+    </lightning:card>
+</aura:component>

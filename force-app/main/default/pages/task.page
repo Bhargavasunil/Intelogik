@@ -1,0 +1,18 @@
+<apex:page >
+    <style>
+      .tabstyle
+      {background-image:None;background-color:orange;color:Black;font-size: 15px;height:3px;}
+    </style>
+    <apex:image value="{!$Resource.RE}" alt="Bullet Image" rendered="true" title="Bike"/>
+    <apex:tabpanel headerspacing="10" headerAlignment="right" tabClass="tabstyle">
+        <apex:tab label="Account"/>
+        <apex:tab label="Contact" style="background-color:#FFEFD5;color:red;font-size:15px;">
+        Contact No:9989332949<br/>
+        Email:abc@gmail.com<br/>
+        Website:https://www.antra.com<br/>
+        </apex:tab>
+        <apex:tab label="Product"/>
+        <apex:tab label="Order"/>
+        <apex:tab label="Report"/>
+    </apex:tabpanel>
+</apex:page>

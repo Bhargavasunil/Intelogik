@@ -1,0 +1,14 @@
+<apex:page readOnly="true">
+ <apex:sectionHeader title="PriceBook" subtitle="New PriceBook"/>
+    <apex:form id="para">
+        <apex:pageBlock title="PriceBook Entry Block" tabStyle="Account">
+          <apex:pageBlockButtons >
+            <apex:commandButton value="Save" reRender="para"/>
+            <apex:commandButton value="Cancel"/>
+          </apex:pageBlockButtons>
+            Name:Bhargava Gupta<br/>
+            Qualification:B.Tech<br/>
+            Designation:Salesforce Developer<br/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

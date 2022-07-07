@@ -1,0 +1,17 @@
+<apex:page setup="true" standardController="contact">
+    <apex:sectionHeader title="contact" subtitle="New Contact" help="/apex/PageTask_4"/>
+    <apex:form >
+    <apex:pageBlock title="Contact">
+        <apex:pageBlockButtons location="Top">
+            <apex:commandButton value="Save"/>
+            <apex:commandButton value="Cancel"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Basic Info" columns="2">           
+                <apex:InputField value="{!contact.FirstName}" />
+                <apex:Inputfield value="{!contact.LastName}"/>
+                <apex:InputField value="{!contact.Email}"/>
+                <apex:InputField value="{!contact.MobilePhone}"/>        
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page >
+    <!--commandbutton requires user interaction. so we have to use <apex:form>--> 
+    <apex:form >
+     
+           <apex:commandButton value="My Button"/>
+            <apex:commandButton value="Cancel" disabled="true" />
+              <apex:commandButton value="Display" rendered="true"/>
+                <!--rendered=false means button will not display -->
+        <apex:commandButton value="Search" action="https://mail.google.com/"/>
+           
+    </apex:form>
+</apex:page>

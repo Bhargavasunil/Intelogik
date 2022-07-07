@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" type="Integer" name="fno"/>
+    <aura:attribute access="public" type="Integer" name="sno"/>
+    <!--register the event-->
+    <aura:registerEvent name="appEvent" type="c:ResultEvent"/>
+    <lightning:card title="Demo1 Component" iconName="standard:outcome">
+        <div class="slds-p-left_medium slds-p-top_medium">
+    <lightning:input name="firstNumber" label="First Number" value="{!v.fno}" style="width:15rem" type="number"/>
+    <lightning:input name="secondNumber" label="Second Number" value="{!v.sno}" style="width:15rem" type="number"/>
+            <br/><br/>
+        <lightning:button label="add" variant="success" onclick="{!c.addition}" iconName="action:add_relationship"/>
+            </div>
+    </lightning:card>
+</aura:component>

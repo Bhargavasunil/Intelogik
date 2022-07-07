@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<lightning:card title="Alignments">
+       <div class="slds-align_absolute-center slds-border_bottom slds-border_top" style="height:5rem">
+           <p>I am Bhargava. I am salesforce developer</p>
+        </div>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,25 @@
+<aura:component 
+                controller="comboclass" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInIt}"/>
+    <aura:attribute access="public" name="input1" type="string"/>
+    <aura:attribute access="public" name="accOptions" type="List"/>
+    <aura:attribute access="public" name="accRecords" type="List"/>  <!--dataTable data -->
+    <aura:attribute access="public" name="cols" type="list"/>
+    <Lightning:card title="comboBox Example" iconName="standard:budget"> <!--can't use Title use title-->
+        <div class="slds-p-left_medium">
+            <lightning:combobox name="accNames" label="Account Name" style="width:12rem" 
+                                options="{!v.accOptions}" value="{!v.input1}" 
+                                onchange="{!c.displayRecord}"/>
+        </div>
+        
+        <br/><br/>
+        <lightning:dataTable 
+                             keyField="id"
+                             data="{!v.accRecords}"
+                             columns="{!v.cols}"
+                             hideCheckboxColumn="true"
+                             />
+    </Lightning:card>
+</aura:component>

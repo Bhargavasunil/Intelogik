@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:registerEvent name="cmpEvent" type="c:P2C_Event" />
+    <h1> Case study of component event</h1>
+    <br/>
+    <lightning:button label="Click here to fire Component Event" onclick="{!c.myAction}"/>
+</aura:component>

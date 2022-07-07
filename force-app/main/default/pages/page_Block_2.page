@@ -1,0 +1,34 @@
+<apex:page >
+    <apex:pageBlock tabStyle="Account" helptitle="need HELP?" helpUrl="/apex/page_Block_2">
+        apex:pageBlock<br/>
+        --------------------------------------<br/>
+        1.This will crate a block on the page.<br/>
+    </apex:pageBlock>
+    <apex:pageblock Title="More Details" >
+        TITLE:: <br/>
+        a.This is a string value.This will be printed on the left corner of the pageBlock Header.<br/>
+        <BR/>
+        <br/>
+        HELP TITLE:::
+        A.This is a string value.Printed on the right corner of the page Block header.<br/>
+        <br/>
+                <br/>
+                       HELP URL:::
+                           A.when we click on help title,page whose url is mentioned as helpurl will be opened.
+        <apex:pageBlock title="dir" dir="rtl">
+        DIR:::<br/>
+        a.This will specify the direction in which content of the block should be displayed.
+            b.Possibe values are RTL(Right to Left),LTR(left to Right)
+              c.Default values are Left to Right(LTR)
+             </apex:pageBlock>
+            <apex:pageBlock title="rendered" rendered="true" dir="LTR">
+               a.This is a rendered Block.It is Boolean value.
+                 b.when it is false, The block will not be displayed.
+            </apex:pageBlock>
+        <apex:pageBlock title="Mode" mode="mainDetail">
+            a.This is a detailPage.
+            b.This will specify in which mode page will be displayed.
+        </apex:pageBlock>
+       
+    </apex:pageblock>
+</apex:page>

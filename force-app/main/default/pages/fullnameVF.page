@@ -1,0 +1,9 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock Title="Details">
+            <apex:pageBlockSection title="My Section" columns="2">
+                
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

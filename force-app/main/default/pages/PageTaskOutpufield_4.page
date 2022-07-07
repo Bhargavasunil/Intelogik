@@ -1,0 +1,17 @@
+<apex:page setup="true" standardController="Contact" >
+    <apex:sectionHeader title="Contact" subtitle="New Contact"/>
+    <apex:form >
+    <apex:pageBlock title="Contact">
+        <apex:pageBlockButtons location="Top">
+         <apex:commandButton value="Save" action="{!save}"/>
+            <apex:commandButton value="Cancel" action="{!Cancel}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection columns="1">
+          <apex:outputField value="{!Contact.FirstName}"/>
+            <apex:outputField value="{!Contact.LastName}"/>
+            <apex:outputField value="{!Contact.Email}"/>
+            <apex:outputField value="{!contact.Phone}"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

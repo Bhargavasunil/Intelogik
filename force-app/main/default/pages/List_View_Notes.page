@@ -1,0 +1,24 @@
+<apex:page standardController="lead" recordSetVar="leadRecordList">
+    <apex:form id="para">
+     <apex:pageBlock title="Lead List">
+         <apex:pageBlockTable value="{!leadRecordList}"  var="LeadVar">
+             <!--adding checkbox for first column-->
+             <apex:column >
+                 <!--inputcheckBox in the header-->
+                 <apex:facet name="header"> <apex:inputCheckbox /> </apex:facet>
+                 <apex:inputcheckBox />
+             </apex:column>
+             <apex:column value="{!LeadVar.FirstName}"/>
+             <apex:column value="{!LeadVar.LastName}"/>
+             <apex:column value="{!LeadVar.LeadSource}"/>
+             <apex:column value="{!LeadVar.Company}"/>
+             <apex:column headervalue="count of Employees">{!LeadVar.NumberOfEmployees}</apex:column>
+             <!--actions for add and delete-->
+             <apex:column headerValue="Actions">
+                 <apex:commandbutton value="Add"/>
+                 <apex:commandbutton value="Delete" rerender="para"/>
+             </apex:column>
+         </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

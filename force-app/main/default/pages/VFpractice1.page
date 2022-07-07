@@ -1,0 +1,15 @@
+<apex:page >
+    <apex:sectionHeader title="product" subtitle="New Product" help="apex/CommandButton"/>
+    <apex:form id="para" >
+      <apex:pageBlock title="Product">
+          <apex:facet name="footer">CopyRights@dell</apex:facet>
+          <apex:pageBlockButtons >
+              <apex:commandButton value="Save" reRender="para"/>
+              <apex:commandButton value="Cancel"/>
+          </apex:pageBlockButtons>
+          Name: Bhargava Gupta<br/><br/>
+          Price:50000<br/><br/>
+          Quantity:1
+       </apex:pageBlock>
+      </apex:form>
+</apex:page>

@@ -1,0 +1,14 @@
+<apex:page controller="AntraEmployeeDeletePicklistClass">
+    <apex:form >
+        <apex:pageBlock >
+            PositionName&nbsp;<apex:inputText value="{!listOfEmp}"/>
+            <apex:selectList size="1">
+            <apex:selectOption />
+            </apex:selectList> &nbsp;&nbsp;
+            <apex:commandButton value="Delete" action="{!deleterecords}"/><br/><br/>
+            <font color="blue" size="8">
+                <apex:outputtext value="{!msg}"/>
+            </font>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

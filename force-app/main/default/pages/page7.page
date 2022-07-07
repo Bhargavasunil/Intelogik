@@ -1,0 +1,11 @@
+<apex:page setUp="true">
+  <apex:sectionheader title="CommnadButton"/>
+   <apex:pageBlock > 
+   <apex:form id="para1">
+          <apex:commandButton value="Button1" disabled="true"/>
+          <apex:commandButton value="Button2" rendered="true"/>
+          <apex:commandButton value="Button3" reRender="para1"/>
+          <apex:commandButton value="Button4" style="Background:white;color:#000000"/>    
+     </apex:form>
+   </apex:pageBlock>
+</apex:page>

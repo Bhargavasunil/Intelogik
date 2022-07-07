@@ -1,0 +1,14 @@
+<aura:component controller="aura6thexmpcontroller" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >    
+    <aura:attribute access="public" type="List" name="conTableData"/>
+    <aura:attribute access="public" type="List" name="conColData"/>
+    <aura:attribute access="public" type="String" name="name"/>
+    <lightning:card>
+        <lightning:input label="Enter name" value="{!v.name}" onchange="{!c.myAction}"/>
+        
+        <lightning:dataTable 
+                             keyField="id"
+                             data="{!v.conTableData}"
+                             columns="{!v.conColData}"
+                             hideCheckboxColumn="false"/>
+    </lightning:card>
+</aura:component>

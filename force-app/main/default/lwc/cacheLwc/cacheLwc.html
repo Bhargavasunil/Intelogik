@@ -1,0 +1,16 @@
+<template>
+    <lightning-card >
+        <lightning-input label="Account Name" placeholder="google" onchange={getAcc}></lightning-input><br/>
+        <template if:true={accList}>
+        <lightning-datatable
+             key-field={id}
+            data = {accList}
+            columns={columns}
+        ></lightning-datatable>
+    </template>
+    <template if:false={error}>
+        {error}
+    </template>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,32 @@
+<!--
+1.https://developer.salesforce.com/forums/?id=906F0000000fzIXIAY
+I am not able to see the fetched records while preview the code
+sol
+i went to accounts tab and changed the view to the all accounts,then i able to see the fetched records.
+-->
+
+
+<apex:page standardController="Account" recordSetVar="accList">
+    <apex:form >
+        <apex:pageBlock mode="maindetail">
+            <apex:pageBlockTable value="{!accList}" var="acc">
+                <apex:column > 
+                    <apex:facet name="header"><apex:inputCheckbox /></apex:facet>
+                    <apex:inputCheckbox />
+                </apex:column>
+                <apex:column headervalue="Name">{!acc.Name}</apex:column>
+                <apex:column headervalue="Industry">{!acc.Industry}</apex:column>
+                <apex:column headervalue="phone">{!acc.Phone}</apex:column>
+                <apex:column value="{!acc.Rating}"/>
+                <apex:column headervalue="Action">
+                    <apex:commandButton value="Edit" />&nbsp;|&nbsp;
+                    <apex:commandButton value="Del"/>
+                </apex:column>
+                <apex:column headervalue="View" >
+                <apex:commandLink value="PDF"/>&nbsp;|&nbsp;
+                    <apex:commandLink value="DOC"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

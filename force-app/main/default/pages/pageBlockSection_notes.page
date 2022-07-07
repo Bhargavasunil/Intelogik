@@ -1,0 +1,23 @@
+<apex:page setup="true">
+    <apex:pageblock title="employee"> 
+    <apex:pageBlockSection >
+           section with out header.
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="section1">
+            Title::<br/><br/>
+            1.This is a String value.<br/><br/>
+            2.This Will be printed as a header for section.
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="section2" collapsible="false">
+            Collapsible::<br/><br/>
+            1.It is a boolean value.<br/><br/>
+            2.when set as a false,collapsible section will be Hidden.<br/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="section3" columns="3">
+               <apex:pageBlock title="One">This is Block 1</apex:pageBlock>
+               <apex:pageBlock title="Two">This is Block 2</apex:pageBlock>
+               <apex:pageBlock title="Three">This is Block 3</apex:pageBlock>
+               <apex:pageBlock title="Four">This is Block 4</apex:pageBlock>
+        </apex:pageBlockSection>
+    </apex:pageblock>
+</apex:page>

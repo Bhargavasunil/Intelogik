@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" name="width" type="string"/>
+    <aura:attribute name="_cellSize" type="Integer"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <lightning:flexipageRegionInfo width="{!v.width}"/>
+    <lightning:layout multipleRows="True">
+        <aura:iteration items="1,2,3,4" var="item">
+            <lightning:layoutItem padding="around-medium" size="{v._cellSize}" class="card">
+                <lightning:card title="{! 'card'+ item}">
+                    <h1 class="center">{!item}</h1>
+                </lightning:card> 
+            </lightning:layoutItem>          
+        </aura:iteration>
+    </lightning:layout>
+</aura:component>

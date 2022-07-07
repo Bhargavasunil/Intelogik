@@ -1,0 +1,26 @@
+<apex:page StandardController="Lead" recordSetVar="leadLst">
+    <apex:form >
+        <apex:dataTable value="{!leadLst}" var="le" frame="vsides" style="margin-left:25px;">
+            <apex:column value="{!le.leadSource}" />
+            <apex:column value="{!le.Email}" />
+            <apex:column value="{!le.Status}"/>
+        </apex:dataTable>
+        <br/><br/>
+        <apex:dataTable value="{!leadLst}" var="le" frame="border">
+        <apex:column value="{!le.leadSource}" />
+            <apex:column value="{!le.Email}" />
+            <apex:column value="{!le.Status}"/>
+        </apex:dataTable>
+        <br/>
+                <br/>
+                <br/>
+                <br/>
+        <p style="color:Blue;text-align:center;">In the Below Data Table, we implemented "Rules"</p><br/>
+        <apex:dataTable value="{!leadLst}" var="le" rules="cols"   frame="box" align="center">
+            <apex:column headerValue="LeadSource">{!le.leadSource}</apex:column>  
+            <apex:column value="{!le.Email}" />
+            <apex:column value="{!le.Status}"/>
+        </apex:dataTable>
+
+    </apex:form>
+</apex:page>

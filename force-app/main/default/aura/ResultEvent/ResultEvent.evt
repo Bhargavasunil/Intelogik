@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template" >
+<!--declaring variable for sum-->
+<aura:attribute access="public" type="Integer" name="sum"/>
+</aura:event>

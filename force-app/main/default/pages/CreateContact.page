@@ -1,0 +1,30 @@
+<apex:page standardController="Contact" >
+    <head>
+              <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Quick Start: Visualforce</title>
+      <!-- Import the Design System style sheet -->
+      <apex:slds />
+
+    </head>
+    <body>
+        <apex:form >
+            <apex:pageBlock title="New Contact" >
+                <!-- Buttons-->
+                <apex:pageblockButtons >
+                    <apex:commandButton action="{!Save}"  Value="Save Contact"/>
+                </apex:pageblockButtons>
+               <apex:pageBlockSection columns="1">
+                      <apex:inputField value="{!Contact.Firstname}"  Required="true"/>
+                      <apex:inputField value="{!Contact.Lastname}" required="false"/>   <!--override the field reqired-->
+                      <apex:inputField value="{!Contact.Email}"/>
+                      <apex:inputField value="{!Contact.Birthdate}"/>
+
+        </apex:pageBlockSection>
+
+            </apex:pageBlock>
+            
+        </apex:form>
+        
+    </body>
+</apex:page>
